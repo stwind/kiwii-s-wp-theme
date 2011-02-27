@@ -1,0 +1,265 @@
+@charset "UTF-8";
+
+/*
+    Author: stwindfy@gmail.com
+    Ver:    1.0.1
+    Date:   2010/12/14
+    
+    [base]
+        0. Resetting default margin and padding
+        1. HTML, Body, Anchor
+        2. Heading, Paragraph
+        3. List
+        4. Table
+        5. Form
+        6. Other
+        7. IE Fix
+        8. Clear Fix
+*/
+
+/* //////////////////////////////////////////////////
+[Base]
+////////////////////////////////////////////////// */
+
+/* --------------------------------------------------
+	0. Resetting default margin and padding
+-------------------------------------------------- */
+
+body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
+dl, dt, dd, ul, ol, li,
+pre, code,
+th, td,
+form, fieldset, legend, button, input, textarea,
+article, section, aside, header, footer, nav {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font:inherit;
+    vertical-align:baseline;
+}
+
+article, section, aside, header, footer, canvas, figcaption, figure, hgroup, menu, nav {
+    display: block;
+}
+
+/* --------------------------------------------------
+	1. HTML, Body, Anchor
+-------------------------------------------------- */
+
+body {
+    background: #fff;
+    /* for Japanese*/
+    /*font-family:Myriad, Helvetica, Arial, "Meiryo", "メイリオ", sans-serif;*/
+    /* for Chinese */
+    font-family: Tahoma, Helvetica, Arial/*, "\5b8b\4f53"*/, sans-serif;
+    /* 13px */
+    font-size: 81.25%;
+    /* 12px */
+    /*font-size:75%;*/
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* for IE6 */
+
+* html body {
+    font-size: 75%;
+}
+
+/*for IE7 */
+*:first-child+html body {
+    font-size: 75%;
+}
+
+/*
+Font-size list (base: 13px)
+ 62% =  8px
+ 70% =  9px
+ 77% = 10px
+ 85% = 11px        162% = 21px        239% = 31px
+ 93% = 12px        170% = 22px        247% = 32px
+100% = 13px        177% = 23px        254% = 33px
+108% = 14px        185% = 24px        262% = 34px
+116% = 15px        193% = 25px        270% = 35px
+124% = 16px        200% = 26px        277% = 36px
+131% = 17px        208% = 27px        285% = 37px
+139% = 18px        216% = 28px        293% = 38px
+147% = 19px        224% = 29px        300% = 39px
+154% = 20px        231% = 30px        308% = 40px
+*/
+
+/*
+Font-size list (base: 12px)
+66.7% =  8px
+75%   =  9px
+83.3% = 10px
+91.6% = 11px        175% = 21px        258% = 31px
+100%  = 12px        183% = 22px        267% = 32px
+108%  = 13px        192% = 23px        275% = 33px
+116%  = 14px        200% = 24px        283% = 34px
+125%  = 15px        208% = 25px        292% = 35px
+133%  = 16px        217% = 26px        300% = 36px
+142%  = 17px        225% = 27px        308% = 37px
+150%  = 18px        233% = 28px        317% = 38px
+158%  = 19px        242% = 29px        325% = 39px
+167%  = 20px        250% = 30px        333% = 40px
+*/
+
+a{
+    text-decoration:none;
+}
+
+a:visited {
+    /*color: #c66;*/
+}
+
+a:hover,
+a:active {
+    text-decoration: none;
+    outline:0;
+}
+
+/* --------------------------------------------------
+	2. Heading, Paragraph
+-------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    line-height: 1.2;
+    font-weight:normal;
+}
+
+/* --------------------------------------------------
+	3. List
+-------------------------------------------------- */
+
+ul, ol {
+    list-style: none;
+}
+
+/* --------------------------------------------------
+	4. Table
+-------------------------------------------------- */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 100%;
+}
+
+caption, th, td {
+    text-align: left;
+    vertical-align: top;
+    font-weight: normal;
+}
+
+/* --------------------------------------------------
+	5. Form
+-------------------------------------------------- */
+
+fieldset {
+    border: none;
+}
+
+input, textarea, select, label {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 100%;
+    vertical-align: middle;
+}
+
+input[type="text"] {
+    padding: 2px 3px;
+    /*border: none;*/
+}
+
+input[type="button"], input[type="submit"], input[type="checkbox"]{
+    cursor:pointer;
+}
+
+textarea {
+    padding: 2px 3px;
+    border: none;
+    overflow: auto;
+}
+
+label {
+    cursor: pointer;
+}
+
+/* --------------------------------------------------
+	6. Other
+-------------------------------------------------- */
+
+img {
+    border: none;
+    vertical-align: bottom;
+}
+
+object {
+    vertical-align: middle;
+    outline: none;
+}
+
+em, strong {
+    font-weight: bold;
+    font-style: normal;
+}
+
+abbr, acronym {
+    border: none;
+    font-variant: normal;
+}
+
+q:before, q:after {
+    content: "";
+}
+
+address, caption, cite, code, dfn, var {
+    font-weight: normal;
+    font-style: normal;
+}
+
+code, pre, kbd, samp {
+    font-family: Consolas, courier new, courier, monospace;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+hr {
+    display: none;
+}
+
+/* ------------------------------------------------------------
+	7. IE Fixs
+------------------------------------------------------------ */
+*:first-child+html body,
+*:first-child+html br {
+    letter-spacing: 0;
+}
+
+hr{ *color:#fff; }  /* for IE7 */
+
+/* ------------------------------------------------------------
+	8. Clear Fix
+------------------------------------------------------------ */
+.group:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height:0;
+    height:0;
+    font-size:0;
+}
+
+* html .group { zoom: 1; } /* for IE6 */
+*:first-child+html .group { zoom: 1; } /* for IE7 */
